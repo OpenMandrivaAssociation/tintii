@@ -1,29 +1,20 @@
-%define name tintii
-%define version 2.5.3
-%define release %mkrel 1
-
-Summary:    Color photo image converter
-Name:       %{name}
-Version:    %{version}
-Release:    %{release}
-License:    GPLv2
-Group:      Graphics
-Source0:    http://www.indii.org/software/tintii/%{name}-%{version}.tar.gz
-Source1:    %{name}.png
-URL:        http://www.indii.org/software/tintii
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: gcc-c++
-BuildRequires: boost-devel 
-BuildRequires: scons 
-BuildRequires: rcs 
-BuildRequires: flex
-BuildRequires: wxGTK2.8-devel
-BuildRequires: libgomp-devel
-BuildRequires: doxygen
-Requires:   glibc >= 2.10.1
-Requires:   libstdc++6 >= 4.4.1
-Obsoletes: %name < %version
-
+Name:		tintii
+Version:	2.5.3
+Release:	%mkrel 2
+Summary:	Color photo image converter
+License:	GPLv2
+Group:		Graphics
+Source0:	http://www.indii.org/software/tintii/%{name}-%{version}.tar.gz
+Source1:	%{name}.png
+URL:		http://www.indii.org/software/tintii
+BuildRequires:	gcc-c++
+BuildRequires:	boost-devel
+BuildRequires:	scons
+BuildRequires:	rcs
+BuildRequires:	flex
+BuildRequires:	wxgtku-devel
+BuildRequires:	libgomp-devel
+BuildRequires:	doxygen
 
 %description
 Tintii takes full color photos and processes them into black and white with some select regions highlighted in color. 
@@ -48,22 +39,21 @@ BMP, PNG, JPG, TIF, GIF, PNM, PCX, ICO, CUR, ANI, TGA, XPM
 %setup -q
 
 %build
-
 %configure2_5x
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
-install -dm 755 %{buildroot}%{_bindir}
-install -m 755 %{name} %{buildroot}%{_bindir}
+%__rm -rf %{buildroot}
+%__install -dm 755 %{buildroot}%{_bindir}
+%__install -m 755 %{name} %{buildroot}%{_bindir}
 
 # icon
-install -dm 755 %{buildroot}%{_datadir}/pixmaps
-install -m  644 %SOURCE1 %{buildroot}%{_datadir}/pixmaps
+%__install -dm 755 %{buildroot}%{_datadir}/pixmaps
+%__install -m  644 %{SOURCE1} %{buildroot}%{_datadir}/pixmaps
 
 # menu-entry
-mkdir -p %{buildroot}%{_datadir}/applications
-cat > %{buildroot}%{_datadir}/applications/%{name}.desktop << EOF
+%__mkdir_p %{buildroot}%{_datadir}/applications
+%__cat > %{buildroot}%{_datadir}/applications/%{name}.desktop << EOF
 [Desktop Entry]
 Type=Application
 Encoding=UTF-8
@@ -75,17 +65,8 @@ Icon=%{name}
 Categories=Graphics;Viewer;X-MandrivaLinux-Graphics-Utility;
 EOF
 
-
 %clean
-rm -rf %{buildroot}
-
-%post
-%{update_menus}
-
-
-%postun
-%{clean_menus}
-
+%__rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root)

@@ -1,10 +1,10 @@
 Name:		tintii
-Version:	2.6.0
+Version:	2.6.1
 Release:	%mkrel 1
 Summary:	Color photo image converter
 License:	GPLv2+
 Group:		Graphics
-Source0:	http://www.indii.org/software/tintii/%{name}-%{version}.tar.gz
+Source0:	http://www.indii.org/files/tint/releases/%{name}-%{version}.tar.gz
 Source1:	%{name}.png
 Patch0:		tintii-2.6.0-mdv-buildfix.patch
 URL:		http://www.indii.org/software/tintii

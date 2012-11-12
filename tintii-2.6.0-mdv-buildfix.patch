@@ -1,0 +1,12 @@
+Index: tintii-2.6.0/src/indii/tint/model/ClusterModelObservable.cpp
+===================================================================
+--- tintii-2.6.0.orig/src/indii/tint/model/ClusterModelObservable.cpp
++++ tintii-2.6.0/src/indii/tint/model/ClusterModelObservable.cpp
+@@ -10,6 +10,7 @@
+  * $Rev: 363 $
+  * $Date: 2012-01-22 18:45:43 +0800 (Sun, 22 Jan 2012) $
+  */
++#include <cstdlib>
+ #include "ClusterModelObservable.hpp"
+ 
+ #include "ClusterModelObserver.hpp"

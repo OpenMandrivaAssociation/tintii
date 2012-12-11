@@ -64,3 +64,23 @@ EOF
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_iconsdir}/hicolor/*/apps/%{name}.*
+
+
+%changelog
+* Sat Mar 17 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 2.6.1-1mdv2011.0
++ Revision: 785454
+- new version 2.6.1
+
+* Mon Mar 12 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 2.6.0-1
++ Revision: 784413
+- fix license
+- new version 2.6.0
+
+* Thu Jan 12 2012 Andrey Bondrov <abondrov@mandriva.org> 2.5.3-2
++ Revision: 760457
+- Rebuild against utf8 wxGTK2.8, spec cleanup
+
+* Wed Nov 02 2011 Alexander Khrukin <akhrukin@mandriva.org> 2.5.3-1
++ Revision: 709960
+- imported package tintii
+

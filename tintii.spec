@@ -1,6 +1,6 @@
 Name:		tintii
 Version:	2.6.1
-Release:	%mkrel 1
+Release:	2
 Summary:	Color photo image converter
 License:	GPLv2+
 Group:		Graphics

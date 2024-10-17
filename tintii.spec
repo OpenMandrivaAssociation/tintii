@@ -7,7 +7,7 @@ Group:		Graphics
 Source0:	http://www.indii.org/files/tint/releases/%{name}-%{version}.tar.gz
 Source1:	%{name}.png
 Patch0:		tintii-2.6.0-mdv-buildfix.patch
-URL:		http://www.indii.org/software/tintii
+URL:		https://www.indii.org/software/tintii
 BuildRequires:	boost-devel
 BuildRequires:	scons
 BuildRequires:	rcs

@@ -8,6 +8,11 @@ Source0:	http://www.indii.org/files/tint/releases/%{name}-%{version}.tar.gz
 Source1:	%{name}.png
 Patch0:		tintii-2.6.0-mdv-buildfix.patch
 URL:		https://www.indii.org/software/tintii
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	boost-devel
 BuildRequires:	scons
 BuildRequires:	rcs
